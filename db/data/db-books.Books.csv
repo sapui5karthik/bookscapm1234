@@ -1,0 +1,6 @@
+ID,title,author,price,publishedDate,digitalCopy
+550e8400-e29b-41d4-a716-446655440001,"Clean Code","Robert C. Martin",39.99,2008-08-01T00:00:00Z,true
+550e8400-e29b-41d4-a716-446655440002,"The Pragmatic Programmer","Andrew Hunt",42.50,1999-10-20T00:00:00Z,true
+550e8400-e29b-41d4-a716-446655440003,"Introduction to Algorithms","Thomas H. Cormen",89.95,2009-07-31T00:00:00Z,false
+550e8400-e29b-41d4-a716-446655440004,"Design Patterns","Erich Gamma",54.00,1994-10-21T00:00:00Z,false
+550e8400-e29b-41d4-a716-446655440005,"You Don't Know JS","Kyle Simpson",29.99,2015-12-27T00:00:00Z,true
