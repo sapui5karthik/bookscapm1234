@@ -6,6 +6,14 @@
     {
       "name": "uaa.user",
       "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    },
+    {
+      "name": "$XSAPPNAME.Kids",
+      "description": "Kids"
     }
   ],
   "role-templates": [
@@ -15,6 +23,30 @@
       "scope-references": [
         "uaa.user"
       ]
+    },
+    {
+      "name": "Admin",
+      "description": "Admin",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    },
+    {
+      "name": "Kids",
+      "description": "Kids",
+      "attribute-references" : [
+        {"name":"booksAgeGroup"}
+      ],
+      "scope-references": [
+        "$XSAPPNAME.Kids"
+      ]
     }
+  ],
+  "role-collections" : [
+    {"name":"AdminRoleCollection","description":"Role collection for Admin","role-template-references":["$XSAPPNAME.Admin"]},
+    {"name":"KidsRoleCollection","description":"Role collection for Kids","role-template-references":["$XSAPPNAME.Kids"]}
+  ],
+  "attributes" : [
+    {"name":"booksAgeGroup","description":"booksAgeGroup","valueType" : "s","valueRequired":false}
   ]
 }

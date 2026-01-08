@@ -24,7 +24,37 @@
   },
   "private": true,
   "cds": {
+    "sql": {
+      "native_hana_associations": false
+    },
     "requires": {
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        },
+        "[development]": {
+          "strategy": "mocked",
+          "users": {
+            "suman": {
+              "password": "welcome1",
+              "roles": [
+                "Admin"
+              ]
+            },
+            "kid1": {
+              "password": "welcome2",
+              "roles": [
+                "Kids"
+              ],
+              "userAttributes": {
+                "booksAgeGroup": [
+                  "KIDS"
+                ]
+              }
+            }
+          }
+        }
+      },
       "[production]": {
         "db": "hana"
       }
